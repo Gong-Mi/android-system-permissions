@@ -1,0 +1,78 @@
+{
+  "counts": {
+    "declared": 11,
+    "framework_resolvable": 8,
+    "third_party_resolvable": 1,
+    "fallback": 0,
+    "candidate_needs_verification": 0,
+    "unresolvable": 2
+  },
+  "permissions": [
+    {
+      "name": "android.permission.ACCESS_NETWORK_STATE",
+      "kind": "framework",
+      "status": "resolvable",
+      "evidence": "android package"
+    },
+    {
+      "name": "android.permission.FOREGROUND_SERVICE",
+      "kind": "framework",
+      "status": "resolvable",
+      "evidence": "android package"
+    },
+    {
+      "name": "android.permission.INTERNET",
+      "kind": "framework",
+      "status": "resolvable",
+      "evidence": "android package"
+    },
+    {
+      "name": "android.permission.POST_NOTIFICATIONS",
+      "kind": "framework",
+      "status": "resolvable",
+      "evidence": "android package"
+    },
+    {
+      "name": "android.permission.QUERY_ALL_PACKAGES",
+      "kind": "framework",
+      "status": "resolvable",
+      "evidence": "android package"
+    },
+    {
+      "name": "android.permission.REQUEST_INSTALL_PACKAGES",
+      "kind": "framework",
+      "status": "resolvable",
+      "evidence": "android package"
+    },
+    {
+      "name": "android.permission.UPDATE_PACKAGES_WITHOUT_USER_ACTION",
+      "kind": "framework",
+      "status": "resolvable",
+      "evidence": "android package"
+    },
+    {
+      "name": "android.permission.WAKE_LOCK",
+      "kind": "framework",
+      "status": "resolvable",
+      "evidence": "android package"
+    },
+    {
+      "name": "com.android.permission.GET_INSTALLED_APPS",
+      "kind": "third-party",
+      "status": "resolvable",
+      "evidence": "granted=true"
+    },
+    {
+      "name": "moe.shizuku.manager.permission.API_V23",
+      "kind": "third-party",
+      "status": "unresolvable",
+      "evidence": "no defining evidence"
+    },
+    {
+      "name": "ohos.permission.GET_BUNDLE_INFO",
+      "kind": "third-party",
+      "status": "unresolvable",
+      "evidence": "no defining evidence"
+    }
+  ]
+}

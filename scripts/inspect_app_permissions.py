@@ -47,6 +47,11 @@ def adb_shell(serial: str | None, command: str, root: bool) -> str:
     return run(prefix + ["sh", "-c", command])
 
 
+def local_shell(command: str) -> str:
+    """Run a package-manager command on the Android host itself."""
+    return run(["su", "-c", command])
+
+
 def declared_permissions(dump: str) -> set[str]:
     names: set[str] = set()
     in_requested = False
@@ -56,6 +61,9 @@ def declared_permissions(dump: str) -> set[str]:
             in_requested = True
             continue
         if in_requested:
+            if re.match(r"\s{4}install permissions:\s*$", line):
+                in_requested = False
+                continue
             match = re.match(r"\s{6,}([A-Za-z][\w.]+)(?::|$)", line)
             if match:
                 names.add(match.group(1))
@@ -125,7 +133,8 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--package", help="installed package name; collect through adb")
     parser.add_argument("--serial", help="adb serial")
-    parser.add_argument("--root", action="store_true", help="run pm commands through su")
+    parser.add_argument("--root", action="store_true", help="run adb shell commands through su")
+    parser.add_argument("--local", action="store_true", help="collect from this Android host through su")
     parser.add_argument("--dump", help="offline pm dump file")
     parser.add_argument("--packages", help="offline pm list packages file")
     parser.add_argument("--fallback", help="LibChecker known_permissions.json")
@@ -136,8 +145,12 @@ def main() -> int:
         parser.error("choose exactly one of --package or --dump")
 
     if args.package:
-        dump = adb_shell(args.serial, f"pm dump {args.package}", args.root)
-        package_text = adb_shell(args.serial, "pm list packages -u", args.root)
+        if args.local:
+            dump = local_shell(f"pm dump {args.package}")
+            package_text = local_shell("pm list packages -u")
+        else:
+            dump = adb_shell(args.serial, f"pm dump {args.package}", args.root)
+            package_text = adb_shell(args.serial, "pm list packages -u", args.root)
     else:
         dump = Path(args.dump).read_text(encoding="utf-8", errors="replace")
         package_text = (

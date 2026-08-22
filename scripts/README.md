@@ -2,6 +2,19 @@ Import, normalization, and validation scripts live here.
 
 ## Inspect an installed app
 
+On the Android host itself (Termux + root):
+
+```sh
+python3 scripts/inspect_app_permissions.py \
+  --local --package com.absinthe.libchecker --json
+```
+
+This runs `su -c pm dump` and `su -c pm list packages -u` directly; no adb
+connection is required. The repository contains one sanitized result from the
+local Android 16 device at `devices/com.absinthe.libchecker-android16.json`.
+
+Through adb:
+
 ```sh
 python3 scripts/inspect_app_permissions.py \
   --package com.example.app --serial <adb-serial> --root
