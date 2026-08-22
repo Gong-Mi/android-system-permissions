@@ -1,0 +1,7 @@
+Package [com.example.app]
+    requested permissions:
+      android.permission.INTERNET
+      com.example.permission.USE_THING: granted=true
+      com.vendor.permission.SPECIAL
+    install permissions:
+      android.permission.INTERNET: granted=true
