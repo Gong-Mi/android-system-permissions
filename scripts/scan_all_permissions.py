@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Build a complete permission catalog from one Android device snapshot.
 
-The local collector intentionally uses two root calls:
+The local collector intentionally uses three root calls:
 1. `dumpsys package` once for the device permission-definition table;
-2. one `su` shell loop for all package requested-permission blocks.
+2. one batched `pm path` collection for base and installed split APKs;
+3. eight parallel `aapt2 dump permissions` workers over those APKs.
 
 It does not start one root process per package.
 """
@@ -30,14 +31,13 @@ def collect_local(out_dir: Path) -> tuple[Path, Path]:
     definitions.write_text(definition_text, encoding="utf-8")
 
     paths = out_dir / ".package-paths.tsv"
-    rows = []
-    for block in definition_text.split("\n  Package [")[1:]:
-        first, _, rest = block.partition("\n")
-        package = first.split("]", 1)[0]
-        match = re.search(r"^    codePath=([^\n]+)", rest, re.M)
-        if match:
-            rows.append(f"{package}\t{match.group(1)}/base.apk")
-    paths.write_text("\n".join(rows) + "\n", encoding="utf-8")
+    path_collector = Path(__file__).with_name("device_apk_paths.sh")
+    path_rows = []
+    for line in run_root(f"sh {path_collector}").splitlines():
+        fields = line.split("\t", 2)
+        if len(fields) == 3 and fields[0] == "PKG":
+            path_rows.append(f"{fields[1]}\t{fields[2]}")
+    paths.write_text("\n".join(path_rows) + "\n", encoding="utf-8")
 
     collector = Path(__file__).with_name("device_aapt_scan.sh")
     requested.write_text(run_root(f"sh {collector} {paths}"), encoding="utf-8")

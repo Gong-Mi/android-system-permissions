@@ -1,4 +1,9 @@
-Import, normalization, and validation scripts live here.
+## Full scan implementation
+
+`scan_all_permissions.py --local` performs one root `dumpsys package`, one
+parallel `pm path` collection for all installed base/split APKs, and eight
+parallel `aapt2 dump permissions` workers. The raw dumps are intermediate only;
+the committed output is the normalized catalog under `api/`.
 
 ## Inspect an installed app
 

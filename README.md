@@ -25,20 +25,20 @@ python3 scripts/scan_all_permissions.py \
 ```
 
 The optimized path performs one `dumpsys package` call to obtain the device
-permission-definition table, extracts each package's base APK path, then runs
-`aapt2 dump permissions` in eight parallel workers. It does not invoke a root
-shell once per application and does not confuse `dumpsys package` bookkeeping
-fields with manifest permissions.
+permission-definition table, extracts every installed base and split APK path,
+then runs `aapt2 dump permissions` in eight parallel workers. It does not invoke
+one root shell once per application and does not confuse `dumpsys package`
+bookkeeping fields with manifest permissions.
 
 The checked-in snapshot contains:
 
 - 902 discovered packages;
-- 548 packages with at least one declared permission;
-- 20,032 declared permission rows;
-- 4,528 unique permission names;
+- 732 packages with at least one declared permission;
+- 24,302 declared permission rows across base and split APK manifests;
+- 4,617 unique permission names;
 - 2,183 permissions with an on-device defining package;
-- 1,331 framework permissions;
-- 1,014 declared permissions with no matching definition in this device's
+- 1,356 framework permissions;
+- 1,078 declared permissions with no matching definition in this device's
   permission table.
 
 The catalog is an evidence snapshot, not a universal Android permission list.
