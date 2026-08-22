@@ -30,17 +30,18 @@ then runs `aapt2 dump permissions` in eight parallel workers. It does not invoke
 one root shell once per application and does not confuse `dumpsys package`
 bookkeeping fields with manifest permissions.
 
-The checked-in snapshot contains:
+The checked-in snapshot stores only the permission directory: 4,617 unique
+permission names. Each entry contains only:
 
-- 902 discovered packages;
-- 732 packages with at least one declared permission;
-- 24,302 declared permission rows across base and split APK manifests;
-- 4,617 unique permission names;
-- 2,183 permissions with an on-device defining package;
-- 1,356 framework permissions;
-- 1,078 declared permissions with no matching definition in this device's
-  permission table.
+- `kind` (`framework`, `defined-on-device`, or
+  `declared-without-definition`);
+- `defining_package`, when present in the device definition table;
+- `protection_level`, when present.
 
+The scan that produced it covered 902 package records and 1,737 installed APK
+paths (base plus splits), including 732 packages with declarations and 24,302
+manifest declaration rows. Package names and APP-to-permission mappings are not
+stored in the committed catalog.
 The catalog is an evidence snapshot, not a universal Android permission list.
 Its device build, API level, and OEM behavior must be recorded separately when
 comparing another device.

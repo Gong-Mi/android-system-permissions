@@ -83,12 +83,9 @@ def build_catalog(
     source: str,
     packages_discovered: int | None = None,
 ) -> dict:
-    declared_by: dict[str, set[str]] = defaultdict(set)
-    for package, permissions in apps.items():
-        for permission in permissions:
-            declared_by[permission].add(package)
-
-    all_names = set(definitions) | set(declared_by)
+    all_names = set(definitions)
+    for names in apps.values():
+        all_names.update(names)
     permissions = {}
     for name in sorted(all_names):
         definition = definitions.get(name, {})
@@ -102,21 +99,15 @@ def build_catalog(
             "kind": kind,
             "defining_package": definition.get("defining_package"),
             "protection_level": definition.get("protection_level"),
-            "declared_by_count": len(declared_by.get(name, set())),
-            "declared_by": sorted(declared_by.get(name, set())),
         }
 
     return {
-        "schema": "android-system-permissions/device-catalog-v1",
+        "schema": "android-system-permissions/permission-directory-v1",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "source": source,
-        "packages_scanned": len(apps),
-        "packages_with_declarations": len(apps),
-        "packages_discovered": packages_discovered if packages_discovered is not None else len(apps),
+        "permission_count": len(all_names),
         "declared_permission_rows": sum(len(x) for x in apps.values()),
-        "unique_permission_names": len(all_names),
         "permissions": permissions,
-        "apps": {package: sorted(names) for package, names in sorted(apps.items())},
     }
 
 
