@@ -15,15 +15,28 @@ import subprocess
 from pathlib import Path
 
 TAGS = [
-    (8, "android-8.0.0_r1"),
-    (9, "android-9.0.0_r1"),
-    (10, "android-10.0.0_r1"),
-    (11, "android-11.0.0_r1"),
-    (12, "android-12.0.0_r1"),
-    (13, "android-13.0.0_r1"),
-    (14, "android-14.0.0_r1"),
-    (15, "android-15.0.0_r1"),
-    (16, "android-16.0.0_r1"),
+    (4, "android-1.6_r1"),
+    (5, "android-2.0_r1"),
+    (7, "android-2.1_r1"),
+    (8, "android-2.2_r1"),
+    (10, "android-2.3.3_r1"),
+    (14, "android-4.0.1_r1"),
+    (16, "android-4.1.1_r1"),
+    (17, "android-4.2.2_r1"),
+    (18, "android-4.3_r1"),
+    (19, "android-4.4_r1"),
+    (21, "android-5.0.0_r1"),
+    (23, "android-6.0.0_r1"),
+    (24, "android-7.0.0_r1"),
+    (26, "android-8.0.0_r1"),
+    (28, "android-9.0.0_r1"),
+    (29, "android-10.0.0_r1"),
+    (30, "android-11.0.0_r1"),
+    (31, "android-12.0.0_r1"),
+    (33, "android-13.0.0_r1"),
+    (34, "android-14.0.0_r1"),
+    (35, "android-15.0.0_r1"),
+    (36, "android-16.0.0_r1"),
 ]
 SOURCE = "platform/frameworks/base/core/res/AndroidManifest.xml"
 GIT_SOURCE = "core/res/AndroidManifest.xml"
@@ -72,7 +85,7 @@ def main() -> int:
     for name, old in names.items():
         record = {
             "status": "not-android-framework-namespace",
-            "first_api": None,
+            "first_seen_api": None,
             "source": None,
             "source_line": None,
             "source_tag": None,
@@ -87,7 +100,7 @@ def main() -> int:
                     record.update(
                         {
                             "status": "frameworks-base-core-res",
-                            "first_api": api,
+                            "first_seen_api": api,
                             "source": SOURCE,
                             "source_line": line,
                             "source_tag": tag,

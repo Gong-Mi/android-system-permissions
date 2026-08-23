@@ -1,10 +1,10 @@
-# AOSP permission/API mapping: Android 8-16
+# AOSP permission/API mapping: Android 1.6-16
 
 Generated from the local permission directory and a sparse checkout of
 `platform/frameworks/base`, using these release tags:
 
 ```text
-android-8.0.0_r1 .. android-16.0.0_r1
+android-1.6_r1 .. android-16.0.0_r1
 ```
 
 Source file checked:
@@ -25,13 +25,13 @@ api/local-android16-permission-directory-aosp.json
 |---|---:|
 | Permission directory entries | 4,559 |
 | `android.permission.*` entries | 1,317 |
-| Found in `frameworks/base/core/res/AndroidManifest.xml` | 1,006 |
-| Not found in that file | 311 |
+| Found in `frameworks/base/core/res/AndroidManifest.xml` | 1,009 |
+| Not found in that file | 308 |
 | Non-framework/vendor/app-specific entries | 3,242 |
 
-For the 1,006 matches, each entry records:
+For the 1,009 matches, each entry records:
 
-- `first_api`: first matched major Android release;
+- `first_seen_api`: first matched API level in the available AOSP tag window;
 - `source_tag`: the exact AOSP release tag used;
 - `source_line`: line in that tag's manifest;
 - `aosp_protection_level`: definition from that tag;
@@ -40,37 +40,52 @@ For the 1,006 matches, each entry records:
 First-match distribution:
 
 ```text
-API 8:  376
-API 9:   67
-API 10:  76
-API 11:  59
-API 12: 101
-API 13:  76
-API 14: 147
-API 15:  65
-API 16:  39
+API 4:  111
+API 5:    7
+API 7:    7
+API 8:   12
+API 10:   3
+API 14:  25
+API 16:  17
+API 17:  16
+API 18:   9
+API 19:  18
+API 21:  40
+API 23:  45
+API 24:  36
+API 26:  40
+API 28:  67
+API 29:  76
+API 30:  59
+API 31: 101
+API 33:  76
+API 34: 147
+API 35:  65
+API 36:  39
 ```
 
 ## Confirmed examples
 
 | Permission | First API | AOSP protection level | Function |
 |---|---:|---|---|
-| `android.permission.INTERNET` | 8 | `normal\|ephemeral` in API 8 tag | create network sockets |
-| `android.permission.CAMERA` | 8 | `dangerous\|ephemeral` in API 8 tag | camera access |
+| `android.permission.INTERNET` | 4 (earliest available tag) | `normal\|ephemeral` in API 4 tag | create network sockets |
+| `android.permission.CAMERA` | 4 (earliest available tag) | `dangerous\|ephemeral` in API 4 tag | camera access |
 | `android.permission.QUERY_ALL_PACKAGES` | 11 | `normal` | package visibility |
 | `android.permission.MANAGE_EXTERNAL_STORAGE` | 11 | `signature\|appop\|preinstalled` | broad external-storage management |
 | `android.permission.POST_NOTIFICATIONS` | 13 | `dangerous\|instant` | post notifications |
 | `android.permission.READ_MEDIA_IMAGES` | 13 | `dangerous` | read images from shared media |
 
-## Meaning of “first API”
+## Meaning of `first_seen_api`
 
-`first_api` means the permission exists in the selected release tag's
-`core/res/AndroidManifest.xml`. It is a major-release lower bound, not an exact
-commit introduction date. A permission may have been added during an API
-release's development before the selected `r1` tag, or may have been moved to a
-module in a later release.
+`first_seen_api` means the earliest matching release tag available in this
+checkout. The current tag window starts at Android 1.6 / API 4 because this
+AOSP repository does not expose the Android 1.0-1.5 framework tags under the
+names searched here. Therefore API 4 entries are lower bounds, not proof that
+the permission was introduced in API 4. For API 5 and later entries, the tag
+window covers the corresponding major release but still does not provide an
+exact development commit.
 
-## The 311 unresolved framework names
+## The 308 unresolved framework names
 
 `not-found-in-frameworks-base-core-res` means only that the permission was not
 found in this one AOSP file. It does not mean “not an AOSP permission”. Likely

@@ -43,11 +43,12 @@ paths (base plus splits), including 732 packages with declarations and 24,302
 manifest declaration rows. Package names and APP-to-permission mappings are not
 stored in the committed catalog.
 The AOSP-enriched directory is generated separately at
-`api/local-android16-permission-directory-aosp.json`. It maps 1,006 of the
+`api/local-android16-permission-directory-aosp.json`. It maps 1,009 of the
 1,317 `android.permission.*` entries to `frameworks/base/core/res/AndroidManifest.xml`
-across Android 8-16 tags, including first major API, source tag, line, and
-protection level. The remaining 311 are left unresolved until modular AOSP,
-Mainline, or OEM source is searched; they are not guessed.
+across Android 1.6/API 4 through Android 16/API 36 tags, including the first
+matched API tag, source line, and protection level. The remaining 308 are left
+unresolved until modular AOSP, Mainline, or OEM source is searched; they are not
+guessed.
 
 Its device build, API level, and OEM behavior must be recorded separately when
 comparing another device.
