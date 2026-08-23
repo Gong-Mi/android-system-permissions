@@ -148,7 +148,7 @@ def main() -> int:
     )
     Path(args.output).parent.mkdir(parents=True, exist_ok=True)
     Path(args.output).write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({k: catalog[k] for k in ("packages_scanned", "declared_permission_rows", "unique_permission_names")}, ensure_ascii=False))
+    print(json.dumps({k: catalog[k] for k in ("permission_count", "declared_permission_rows")}, ensure_ascii=False))
     return 0
 
 
