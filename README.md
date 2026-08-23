@@ -42,7 +42,13 @@ The scan that produced it covered 902 package records and 1,737 installed APK
 paths (base plus splits), including 732 packages with declarations and 24,302
 manifest declaration rows. Package names and APP-to-permission mappings are not
 stored in the committed catalog.
-The catalog is an evidence snapshot, not a universal Android permission list.
+The AOSP-enriched directory is generated separately at
+`api/local-android16-permission-directory-aosp.json`. It maps 1,006 of the
+1,317 `android.permission.*` entries to `frameworks/base/core/res/AndroidManifest.xml`
+across Android 8-16 tags, including first major API, source tag, line, and
+protection level. The remaining 311 are left unresolved until modular AOSP,
+Mainline, or OEM source is searched; they are not guessed.
+
 Its device build, API level, and OEM behavior must be recorded separately when
 comparing another device.
 
