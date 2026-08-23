@@ -70,6 +70,32 @@ def attrs(block: str) -> dict[str, str]:
     }
 
 
+def relation_names(name: str, all_names: set[str]) -> list[dict[str, str]]:
+    explicit = {
+        "android.permission.READ_EXTERNAL_STORAGE": (
+            [
+                "android.permission.READ_MEDIA_IMAGES",
+                "android.permission.READ_MEDIA_VIDEO",
+                "android.permission.READ_MEDIA_AUDIO",
+                "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+            ],
+            "API33_media_split_replacement",
+        ),
+        "android.permission.ACCESS_FINE_LOCATION": (
+            ["android.permission.ACCESS_COARSE_LOCATION"], "location_precision_pair"
+        ),
+        "android.permission.ACCESS_COARSE_LOCATION": (
+            ["android.permission.ACCESS_FINE_LOCATION"], "location_precision_pair"
+        ),
+    }
+    targets, relation = explicit.get(name, ([], ""))
+    return [
+        {"name": target, "relation": relation, "confidence": "source-backed-name-family"}
+        for target in targets
+        if target in all_names
+    ]
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--aosp", required=True, type=Path)
@@ -86,10 +112,15 @@ def main() -> int:
         record = {
             "status": "not-android-framework-namespace",
             "first_seen_api": None,
+            "available_since_api": None,
             "source": None,
             "source_line": None,
             "source_tag": None,
             "aosp_protection_level": None,
+            "aosp_permission_group": None,
+            "permission_flags": None,
+            "related_permissions": relation_names(name, set(names)),
+            "api_history": [],
         }
         if name.startswith("android.permission."):
             record["status"] = "not-found-in-frameworks-base-core-res"
@@ -97,17 +128,37 @@ def main() -> int:
                 if name in parsed[tag]:
                     line, block = parsed[tag][name]
                     a = attrs(block)
-                    record.update(
+                    record["api_history"].append(
                         {
-                            "status": "frameworks-base-core-res",
-                            "first_seen_api": api,
-                            "source": SOURCE,
+                            "api": api,
+                            "tag": tag,
                             "source_line": line,
-                            "source_tag": tag,
-                            "aosp_protection_level": a.get("protectionLevel"),
+                            "protection_level": a.get("protectionLevel"),
                         }
                     )
-                    break
+                    if record["first_seen_api"] is None:
+                        record.update(
+                            {
+                                "status": "frameworks-base-core-res",
+                                "first_seen_api": api,
+                                "available_since_api": api,
+                                "source": SOURCE,
+                                "source_line": line,
+                                "source_tag": tag,
+                                "aosp_protection_level": a.get("protectionLevel"),
+                                "aosp_permission_group": a.get("permissionGroup"),
+                                "permission_flags": a.get("permissionFlags"),
+                            }
+                        )
+                    background = a.get("backgroundPermission")
+                    if background and not any(x["name"] == background for x in record["related_permissions"]):
+                        record["related_permissions"].append(
+                            {
+                                "name": background,
+                                "relation": "background_permission",
+                                "confidence": "AOSP android:backgroundPermission",
+                            }
+                        )
         records[name] = dict(old, aosp=record)
 
     output = dict(directory)

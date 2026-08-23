@@ -31,10 +31,13 @@ api/local-android16-permission-directory-aosp.json
 
 For the 1,009 matches, each entry records:
 
-- `first_seen_api`: first matched API level in the available AOSP tag window;
+- `first_seen_api` / `available_since_api`: first matched API level in the available AOSP tag window;
+- `api_history`: every selected release tag where the definition exists, including protection-level changes;
 - `source_tag`: the exact AOSP release tag used;
 - `source_line`: line in that tag's manifest;
-- `aosp_protection_level`: definition from that tag;
+- `aosp_protection_level`: definition from the first matched tag;
+- `aosp_permission_group` and `permission_flags`, when present;
+- `related_permissions`, including source-backed background permissions and explicit API migration families;
 - `source`: the canonical AOSP path.
 
 First-match distribution:
@@ -63,6 +66,27 @@ API 34: 147
 API 35:  65
 API 36:  39
 ```
+
+## Related and replacement permissions
+
+The mapper records only relationships with explicit evidence or a narrow,
+well-defined API family:
+
+- `ACCESS_FINE_LOCATION` / `ACCESS_COARSE_LOCATION` are a precision pair; both
+  point to `ACCESS_BACKGROUND_LOCATION` through AOSP's `backgroundPermission`
+  attribute.
+- `CAMERA` points to `BACKGROUND_CAMERA` through AOSP's
+  `backgroundPermission` attribute.
+- `RECORD_AUDIO` points to `RECORD_BACKGROUND_AUDIO` through the same attribute.
+- `BODY_SENSORS` points to `BODY_SENSORS_BACKGROUND` through the same
+  attribute.
+- `READ_EXTERNAL_STORAGE` is related to the API 33 media split family:
+  `READ_MEDIA_IMAGES`, `READ_MEDIA_VIDEO`, `READ_MEDIA_AUDIO`, and
+  `READ_MEDIA_VISUAL_USER_SELECTED`.
+
+A related permission is not automatically interchangeable. For example,
+background permission normally requires the foreground/base permission and may
+have separate targetSdk, AppOps, role, or runtime-grant rules.
 
 ## Confirmed examples
 

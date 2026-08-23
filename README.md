@@ -46,9 +46,10 @@ The AOSP-enriched directory is generated separately at
 `api/local-android16-permission-directory-aosp.json`. It maps 1,009 of the
 1,317 `android.permission.*` entries to `frameworks/base/core/res/AndroidManifest.xml`
 across Android 1.6/API 4 through Android 16/API 36 tags, including the first
-matched API tag, source line, and protection level. The remaining 308 are left
-unresolved until modular AOSP, Mainline, or OEM source is searched; they are not
-guessed.
+matched API tag, full selected-tag history, source line, protection level,
+permission flags, and source-backed related/replacement permissions. The
+remaining 308 are left unresolved until modular AOSP, Mainline, or OEM source is
+searched; they are not guessed.
 
 Its device build, API level, and OEM behavior must be recorded separately when
 comparing another device.
