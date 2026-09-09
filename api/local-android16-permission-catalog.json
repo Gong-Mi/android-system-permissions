@@ -1,9 +1,9 @@
 {
   "schema": "android-system-permissions/permission-directory-v1",
-  "generated_at": "2026-08-23T00:03:16.299567+00:00",
-  "source": "offline sanitized device snapshot",
-  "permission_count": 4559,
-  "declared_permission_rows": 24291,
+  "generated_at": "2026-09-09T17:14:44.511617+00:00",
+  "source": "local device via su: dumpsys package + batched pm dump",
+  "permission_count": 4590,
+  "declared_permission_rows": 24427,
   "permissions": {
     ".PERMISSION": {
       "kind": "declared-without-definition",
@@ -2164,6 +2164,11 @@
       "kind": "framework",
       "defining_package": "android",
       "protection_level": "normal"
+    },
+    "android.permission.DEVELOPER_VERIFICATION_AGENT": {
+      "kind": "framework",
+      "defining_package": null,
+      "protection_level": null
     },
     "android.permission.DEVICE_POWER": {
       "kind": "framework",
@@ -4609,6 +4614,11 @@
       "kind": "framework",
       "defining_package": "android",
       "protection_level": "internal|role"
+    },
+    "android.permission.READ_HOME_TIME_ZONE": {
+      "kind": "framework",
+      "defining_package": null,
+      "protection_level": null
     },
     "android.permission.READ_IMEI": {
       "kind": "framework",
@@ -7170,6 +7180,51 @@
       "defining_package": "cn.wps.moffice_eng",
       "protection_level": "signature"
     },
+    "cn.wps.yun.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
+      "kind": "defined-on-device",
+      "defining_package": "cn.wps.yun",
+      "protection_level": "signature"
+    },
+    "cn.wps.yun.permission.BROADCAST": {
+      "kind": "defined-on-device",
+      "defining_package": "cn.wps.yun",
+      "protection_level": "signature|privileged"
+    },
+    "cn.wps.yun.permission.CLOUD_CROSSPROCESS_RECEIVE": {
+      "kind": "defined-on-device",
+      "defining_package": "cn.wps.yun",
+      "protection_level": "signature"
+    },
+    "cn.wps.yun.permission.KSO_LOGIN_EVENT": {
+      "kind": "defined-on-device",
+      "defining_package": "cn.wps.yun",
+      "protection_level": "signature"
+    },
+    "cn.wps.yun.permission.MIPUSH_RECEIVE": {
+      "kind": "defined-on-device",
+      "defining_package": "cn.wps.yun",
+      "protection_level": "signature"
+    },
+    "cn.wps.yun.permission.PROCESS_PUSH_MSG": {
+      "kind": "defined-on-device",
+      "defining_package": "cn.wps.yun",
+      "protection_level": "signature"
+    },
+    "cn.wps.yun.permission.PUSH_PROVIDER": {
+      "kind": "defined-on-device",
+      "defining_package": "cn.wps.yun",
+      "protection_level": "signature"
+    },
+    "cn.wps.yun.permission.PUSH_RECEIVE_MESSAGE": {
+      "kind": "defined-on-device",
+      "defining_package": "cn.wps.yun",
+      "protection_level": "signature"
+    },
+    "cn.wps.yun.permission.PUSH_WRITE_PROVIDER": {
+      "kind": "defined-on-device",
+      "defining_package": "cn.wps.yun",
+      "protection_level": "signature"
+    },
     "com.AG.atomMerge.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
       "kind": "defined-on-device",
       "defining_package": "com.AG.atomMerge",
@@ -7659,6 +7714,11 @@
       "kind": "declared-without-definition",
       "defining_package": null,
       "protection_level": null
+    },
+    "com.android.calendar.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
+      "kind": "defined-on-device",
+      "defining_package": "com.android.calendar",
+      "protection_level": "signature"
     },
     "com.android.calendar.permission.MIPUSH_RECEIVE": {
       "kind": "defined-on-device",
@@ -8435,6 +8495,11 @@
       "defining_package": "com.android.settings",
       "protection_level": "signature|privileged"
     },
+    "com.android.settings.permission.PROVISION_ENABLE_ACCESSIBILITY": {
+      "kind": "defined-on-device",
+      "defining_package": "com.android.settings",
+      "protection_level": "signature|privileged"
+    },
     "com.android.settings.permission.PULL_CLOUD_DATA": {
       "kind": "defined-on-device",
       "defining_package": "com.android.settings",
@@ -8843,16 +8908,6 @@
     "com.arjanvlek.oxygenupdater.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
       "kind": "defined-on-device",
       "defining_package": "com.arjanvlek.oxygenupdater",
-      "protection_level": "signature"
-    },
-    "com.asobimo.toramonline.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
-      "kind": "defined-on-device",
-      "defining_package": "com.asobimo.toramonline",
-      "protection_level": "signature"
-    },
-    "com.asobimo.toramonline.permission.C2D_MESSAGE": {
-      "kind": "defined-on-device",
-      "defining_package": "com.asobimo.toramonline",
       "protection_level": "signature"
     },
     "com.asus.launcher3.permission.READ_SETTINGS": {
@@ -9945,6 +10000,11 @@
       "defining_package": null,
       "protection_level": null
     },
+    "com.ghostlock.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
+      "kind": "defined-on-device",
+      "defining_package": "com.ghostlock.app",
+      "protection_level": "signature"
+    },
     "com.github.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
       "kind": "defined-on-device",
       "defining_package": "com.github.android",
@@ -10400,6 +10460,11 @@
       "defining_package": null,
       "protection_level": null
     },
+    "com.google.android.apps.pixel.relationships.permission.REFRESH_WIDGET": {
+      "kind": "declared-without-definition",
+      "defining_package": null,
+      "protection_level": null
+    },
     "com.google.android.apps.pixel.support.LAUNCH_SUPPORT": {
       "kind": "declared-without-definition",
       "defining_package": null,
@@ -10429,6 +10494,11 @@
       "kind": "defined-on-device",
       "defining_package": "com.google.android.apps.restore",
       "protection_level": "signature|privileged|development"
+    },
+    "com.google.android.apps.search.assistant.SEMANTIC_LOCATION_ONBOARDING_PERMISSION": {
+      "kind": "defined-on-device",
+      "defining_package": "com.google.android.googlequicksearchbox",
+      "protection_level": "signature|knownSigner"
     },
     "com.google.android.apps.search.omnient.permission.LAUNCH_FROM_EXTERNAL_APP": {
       "kind": "defined-on-device",
@@ -11745,6 +11815,11 @@
       "defining_package": "com.android.vending",
       "protection_level": "signature"
     },
+    "com.google.android.verifier.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
+      "kind": "defined-on-device",
+      "defining_package": "com.google.android.verifier",
+      "protection_level": "signature"
+    },
     "com.google.android.videos.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
       "kind": "defined-on-device",
       "defining_package": "com.google.android.videos",
@@ -11905,6 +11980,11 @@
       "defining_package": "com.halls.of.torment.paid.gp",
       "protection_level": "signature"
     },
+    "com.hemispheregames.osmos.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
+      "kind": "defined-on-device",
+      "defining_package": "com.hemispheregames.osmos",
+      "protection_level": "signature"
+    },
     "com.hermes.goda.permission.JPUSH_MESSAGE": {
       "kind": "defined-on-device",
       "defining_package": "com.hermes.goda",
@@ -12036,6 +12116,11 @@
       "protection_level": null
     },
     "com.hihonor.push.permission.READ_PUSH_NOTIFICATION_INFO": {
+      "kind": "declared-without-definition",
+      "defining_package": null,
+      "protection_level": null
+    },
+    "com.hihonor.push.permission.WRITE_PUSH_NOTIFICATION_INFO": {
       "kind": "declared-without-definition",
       "defining_package": null,
       "protection_level": null
@@ -13510,9 +13595,44 @@
       "defining_package": "com.metaso",
       "protection_level": "signature"
     },
+    "com.mfashiongallery.emag.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
+      "kind": "defined-on-device",
+      "defining_package": "com.mfashiongallery.emag",
+      "protection_level": "signature"
+    },
     "com.mfashiongallery.emag.permission.MIPUSH_RECEIVE": {
       "kind": "defined-on-device",
       "defining_package": "com.mfashiongallery.emag",
+      "protection_level": "signature"
+    },
+    "com.mfcloudcalculate.networkdisk.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
+      "kind": "defined-on-device",
+      "defining_package": "com.mfcloudcalculate.networkdisk",
+      "protection_level": "signature"
+    },
+    "com.mfcloudcalculate.networkdisk.openadsdk.permission.TT_PANGOLIN": {
+      "kind": "defined-on-device",
+      "defining_package": "com.mfcloudcalculate.networkdisk",
+      "protection_level": "signature"
+    },
+    "com.mfcloudcalculate.networkdisk.permission.MIPUSH_RECEIVE": {
+      "kind": "defined-on-device",
+      "defining_package": "com.mfcloudcalculate.networkdisk",
+      "protection_level": "signature"
+    },
+    "com.mfcloudcalculate.networkdisk.permission.PROCESS_PUSH_MSG": {
+      "kind": "defined-on-device",
+      "defining_package": "com.mfcloudcalculate.networkdisk",
+      "protection_level": "signature"
+    },
+    "com.mfcloudcalculate.networkdisk.permission.PUSH_PROVIDER": {
+      "kind": "defined-on-device",
+      "defining_package": "com.mfcloudcalculate.networkdisk",
+      "protection_level": "signature"
+    },
+    "com.mfcloudcalculate.networkdisk.permission.PUSH_WRITE_PROVIDER": {
+      "kind": "defined-on-device",
+      "defining_package": "com.mfcloudcalculate.networkdisk",
       "protection_level": "signature"
     },
     "com.mgyun.permission.READ_SETTINGS": {
@@ -14010,11 +14130,6 @@
       "defining_package": "com.microsoft.office.onenote",
       "protection_level": "signature"
     },
-    "com.microsoft.office.outlook.ACCOUNT_CREATION_PERMISSION": {
-      "kind": "defined-on-device",
-      "defining_package": "com.microsoft.office.outlook",
-      "protection_level": "normal"
-    },
     "com.microsoft.office.outlook.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
       "kind": "defined-on-device",
       "defining_package": "com.microsoft.office.outlook",
@@ -14225,6 +14340,11 @@
       "defining_package": "com.miui.bugreport",
       "protection_level": "signature|privileged"
     },
+    "com.miui.bugreport.permission.BIND_SYSTEM": {
+      "kind": "defined-on-device",
+      "defining_package": "com.miui.bugreport",
+      "protection_level": "signature|privileged"
+    },
     "com.miui.bugreport.permission.DUMP_CACHED_LOG": {
       "kind": "defined-on-device",
       "defining_package": "com.miui.bugreport",
@@ -14284,6 +14404,16 @@
       "kind": "defined-on-device",
       "defining_package": "com.milink.service",
       "protection_level": "signature|privileged"
+    },
+    "com.miui.cit.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
+      "kind": "defined-on-device",
+      "defining_package": "com.miui.cit",
+      "protection_level": "signature"
+    },
+    "com.miui.cit.permission.LAUNCH_AUTO_TEST": {
+      "kind": "defined-on-device",
+      "defining_package": "com.miui.cit",
+      "protection_level": "dangerous"
     },
     "com.miui.cleaner.permission.CLEAN_SERVICE": {
       "kind": "declared-without-definition",
@@ -14659,6 +14789,11 @@
       "kind": "defined-on-device",
       "defining_package": "com.miui.guardprovider",
       "protection_level": "signature"
+    },
+    "com.miui.guardprovider.permission.VirusScanNG": {
+      "kind": "defined-on-device",
+      "defining_package": "com.miui.guardprovider",
+      "protection_level": "signature|privileged"
     },
     "com.miui.home.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
       "kind": "defined-on-device",
@@ -15375,6 +15510,11 @@
       "defining_package": "com.miui.packageinstaller",
       "protection_level": "signature|privileged"
     },
+    "com.miui.security.permission.queryOfflineInstallAppSign": {
+      "kind": "declared-without-definition",
+      "defining_package": null,
+      "protection_level": null
+    },
     "com.miui.securityadd.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
       "kind": "defined-on-device",
       "defining_package": "com.miui.securityadd",
@@ -15661,6 +15801,11 @@
       "protection_level": "signature|privileged|preinstalled"
     },
     "com.miui.thirdappassistant.permission.MIPUSH_RECEIVE": {
+      "kind": "defined-on-device",
+      "defining_package": "com.miui.thirdappassistant",
+      "protection_level": "signature"
+    },
+    "com.miui.thirdappassistant.permission.SEND_MEMORY_EXCEEDED": {
       "kind": "defined-on-device",
       "defining_package": "com.miui.thirdappassistant",
       "protection_level": "signature"
@@ -16245,6 +16390,11 @@
       "defining_package": "com.okidokico.okgolf",
       "protection_level": "signature"
     },
+    "com.omarea.vtools.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
+      "kind": "defined-on-device",
+      "defining_package": "com.omarea.vtools",
+      "protection_level": "signature"
+    },
     "com.onepassword.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
       "kind": "defined-on-device",
       "defining_package": "com.onepassword.android",
@@ -16598,6 +16748,11 @@
     "com.playdigious.evoland2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
       "kind": "defined-on-device",
       "defining_package": "com.playdigious.evoland2",
+      "protection_level": "signature"
+    },
+    "com.playdigious.potionpermit.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
+      "kind": "defined-on-device",
+      "defining_package": "com.playdigious.potionpermit",
       "protection_level": "signature"
     },
     "com.prineside.tdi2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
@@ -18265,11 +18420,6 @@
       "defining_package": "com.ssicosm.dungeon_princess_2",
       "protection_level": "signature"
     },
-    "com.studiowildcard.arkuse.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
-      "kind": "defined-on-device",
-      "defining_package": "com.studiowildcard.arkuse",
-      "protection_level": "signature"
-    },
     "com.supernds.free.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
       "kind": "defined-on-device",
       "defining_package": "com.supernds.free",
@@ -18345,37 +18495,17 @@
       "defining_package": null,
       "protection_level": null
     },
+    "com.taobao.idlefish.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
+      "kind": "defined-on-device",
+      "defining_package": "com.taobao.idlefish",
+      "protection_level": "signature"
+    },
     "com.taobao.idlefish.openadsdk.permission.TT_PANGOLIN": {
       "kind": "defined-on-device",
       "defining_package": "com.taobao.idlefish",
       "protection_level": "signature"
     },
     "com.taobao.idlefish.permission.C2D_MESSAGE": {
-      "kind": "defined-on-device",
-      "defining_package": "com.taobao.idlefish",
-      "protection_level": "signature"
-    },
-    "com.taobao.idlefish.permission.MIPUSH_RECEIVE": {
-      "kind": "defined-on-device",
-      "defining_package": "com.taobao.idlefish",
-      "protection_level": "signature|privileged"
-    },
-    "com.taobao.idlefish.permission.PROCESS_PUSH_MSG": {
-      "kind": "defined-on-device",
-      "defining_package": "com.taobao.idlefish",
-      "protection_level": "signature"
-    },
-    "com.taobao.idlefish.permission.PUSH_PROVIDER": {
-      "kind": "defined-on-device",
-      "defining_package": "com.taobao.idlefish",
-      "protection_level": "signature"
-    },
-    "com.taobao.idlefish.permission.PUSH_WRITE_PROVIDER": {
-      "kind": "defined-on-device",
-      "defining_package": "com.taobao.idlefish",
-      "protection_level": "signature"
-    },
-    "com.taobao.idlefish.push.permission.MESSAGE": {
       "kind": "defined-on-device",
       "defining_package": "com.taobao.idlefish",
       "protection_level": "signature"
@@ -19015,11 +19145,6 @@
       "defining_package": "com.twitter.android",
       "protection_level": "signature"
     },
-    "com.twitter.android.permission.RESTRICTED": {
-      "kind": "defined-on-device",
-      "defining_package": "com.twitter.android",
-      "protection_level": "signature"
-    },
     "com.ucar.permission.UCAR_APP_SERVICE": {
       "kind": "defined-on-device",
       "defining_package": "com.autonavi.minimap",
@@ -19074,6 +19199,11 @@
       "kind": "defined-on-device",
       "defining_package": "com.unionpay.tsmservice.mi",
       "protection_level": "signature|privileged"
+    },
+    "com.unknownworlds.subnautica.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
+      "kind": "defined-on-device",
+      "defining_package": "com.unknownworlds.subnautica",
+      "protection_level": "signature"
     },
     "com.ut.permission.DEVICE_STATE": {
       "kind": "declared-without-definition",
@@ -20750,6 +20880,16 @@
       "defining_package": "com.xiaomi.smarthome",
       "protection_level": "normal"
     },
+    "com.xiaomi.smarthome.permission.C2D_MESSAGE": {
+      "kind": "defined-on-device",
+      "defining_package": "com.xiaomi.smarthome",
+      "protection_level": "signature"
+    },
+    "com.xiaomi.smarthome.permission.JPUSH_MESSAGE": {
+      "kind": "defined-on-device",
+      "defining_package": "com.xiaomi.smarthome",
+      "protection_level": "signature"
+    },
     "com.xiaomi.smarthome.permission.MIPUSH_RECEIVE": {
       "kind": "defined-on-device",
       "defining_package": "com.xiaomi.smarthome",
@@ -20760,10 +20900,30 @@
       "defining_package": "com.xiaomi.smarthome",
       "protection_level": "signature|privileged"
     },
+    "com.xiaomi.smarthome.permission.PROCESS_PUSH_MSG": {
+      "kind": "defined-on-device",
+      "defining_package": "com.xiaomi.smarthome",
+      "protection_level": "signature"
+    },
+    "com.xiaomi.smarthome.permission.PUSH_PROVIDER": {
+      "kind": "defined-on-device",
+      "defining_package": "com.xiaomi.smarthome",
+      "protection_level": "signature"
+    },
+    "com.xiaomi.smarthome.permission.PUSH_WRITE_PROVIDER": {
+      "kind": "defined-on-device",
+      "defining_package": "com.xiaomi.smarthome",
+      "protection_level": "signature"
+    },
     "com.xiaomi.smarthome.permission.SEND_DOWNLOAD_COMPLETED_INTENTS": {
       "kind": "defined-on-device",
       "defining_package": "com.xiaomi.smarthome",
       "protection_level": "normal"
+    },
+    "com.xiaomi.smarthome.push.permission.MESSAGE": {
+      "kind": "defined-on-device",
+      "defining_package": "com.xiaomi.smarthome",
+      "protection_level": "signature"
     },
     "com.xiaomi.smarthome.uwb.permission.RECEIVE_ENDPOINT": {
       "kind": "declared-without-definition",
@@ -20799,6 +20959,11 @@
       "kind": "defined-on-device",
       "defining_package": "com.xiaomi.trustservice",
       "protection_level": "signature"
+    },
+    "com.xiaomi.trustservice.permission.BIND_MITRUE_DEVICE_SERVICE": {
+      "kind": "declared-without-definition",
+      "defining_package": null,
+      "protection_level": null
     },
     "com.xiaomi.vip.permission.SERVICE": {
       "kind": "declared-without-definition",
@@ -20990,25 +21155,10 @@
       "defining_package": "com.xingin.xhs",
       "protection_level": "signature"
     },
-    "com.xingin.xhs.permission.C2D_MESSAGE": {
-      "kind": "defined-on-device",
-      "defining_package": "com.xingin.xhs",
-      "protection_level": "signature"
-    },
-    "com.xingin.xhs.permission.MIPUSH_RECEIVE": {
-      "kind": "defined-on-device",
-      "defining_package": "com.xingin.xhs",
-      "protection_level": "signature"
-    },
     "com.xingin.xhs.permission.RECEIVE_VOLLEY_SHARE_RESULT": {
       "kind": "defined-on-device",
       "defining_package": "com.xingin.xhs",
       "protection_level": "normal"
-    },
-    "com.xingin.xhs.push.permission.MESSAGE": {
-      "kind": "defined-on-device",
-      "defining_package": "com.xingin.xhs",
-      "protection_level": "signature"
     },
     "com.xjs.ehviewer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
       "kind": "defined-on-device",
@@ -21255,21 +21405,6 @@
       "defining_package": "com.zhihu.android",
       "protection_level": "signature"
     },
-    "com.zhihu.android.download.PRIVATE_BROADCAST_PERMISSION": {
-      "kind": "defined-on-device",
-      "defining_package": "com.zhihu.android",
-      "protection_level": "signature"
-    },
-    "com.zhihu.android.openadsdk.permission.TT_PANGOLIN": {
-      "kind": "defined-on-device",
-      "defining_package": "com.zhihu.android",
-      "protection_level": "signature"
-    },
-    "com.zhihu.android.permission.MIPUSH_RECEIVE": {
-      "kind": "defined-on-device",
-      "defining_package": "com.zhihu.android",
-      "protection_level": "signature"
-    },
     "com.zte.lqsoft.launcher.permission.READ_SETTINGS": {
       "kind": "declared-without-definition",
       "defining_package": null,
@@ -21423,6 +21558,11 @@
     "getui.permission.GetuiService.com.unionpay": {
       "kind": "defined-on-device",
       "defining_package": "com.unionpay",
+      "protection_level": "signature"
+    },
+    "getui.permission.GetuiService.com.xiaomi.smarthome": {
+      "kind": "defined-on-device",
+      "defining_package": "com.xiaomi.smarthome",
       "protection_level": "signature"
     },
     "getui.permission.GetuiService.com.zhihu.android": {
@@ -22230,6 +22370,11 @@
       "defining_package": "net.gameduo.cm",
       "protection_level": "signature"
     },
+    "net.gameduo.dfd.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
+      "kind": "defined-on-device",
+      "defining_package": "net.gameduo.dfd",
+      "protection_level": "signature"
+    },
     "net.imknown.android.forefrontinfo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
       "kind": "defined-on-device",
       "defining_package": "net.imknown.android.forefrontinfo",
@@ -22444,6 +22589,16 @@
       "kind": "defined-on-device",
       "defining_package": "org.dolphinemu.dolphinemu.debug",
       "protection_level": "signature"
+    },
+    "org.fdroid.fdroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
+      "kind": "defined-on-device",
+      "defining_package": "org.fdroid.fdroid",
+      "protection_level": "signature"
+    },
+    "org.fdroid.fdroid.permission.UPDATE_REPOS": {
+      "kind": "defined-on-device",
+      "defining_package": "org.fdroid.fdroid",
+      "protection_level": "signature|privileged"
     },
     "org.fidoalliance.uaf.permissions.FIDO_CLIENT": {
       "kind": "declared-without-definition",
