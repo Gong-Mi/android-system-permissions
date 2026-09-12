@@ -1,9 +1,9 @@
 {
   "schema": "android-system-permissions/permission-directory-with-aosp-modules-v1",
-  "generated_at": "2026-09-09T17:14:44.511617+00:00",
+  "generated_at": "2026-09-12T09:40:21.907122+00:00",
   "source": "local device via su: dumpsys package + batched pm dump",
-  "permission_count": 4590,
-  "declared_permission_rows": 24427,
+  "permission_count": 4591,
+  "declared_permission_rows": 24438,
   "permissions": {
     ".PERMISSION": {
       "kind": "declared-without-definition",
@@ -1981,8 +1981,19 @@
         "permission_flags": null,
         "related_permissions": [],
         "api_history": [],
-        "module_sources": [],
-        "module_api_status": "not-located-in-checked-modules",
+        "module_sources": [
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "apct-tests/perftests/core/src/android/util/XmlPerfTest.java",
+              "core/java/android/provider/Downloads.java"
+            ],
+            "path_count": 2,
+            "source_class": "module-reference-only"
+          }
+        ],
+        "module_api_status": "current-source-located",
         "module_first_seen_api": null
       }
     },
@@ -3169,8 +3180,20 @@
         "permission_flags": null,
         "related_permissions": [],
         "api_history": [],
-        "module_sources": [],
-        "module_api_status": "not-located-in-checked-modules",
+        "module_sources": [
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "apct-tests/perftests/core/src/android/util/XmlPerfTest.java",
+              "core/java/android/provider/Downloads.java",
+              "core/tests/coretests/AndroidManifest.xml"
+            ],
+            "path_count": 3,
+            "source_class": "module-permission-source"
+          }
+        ],
+        "module_api_status": "current-source-located",
         "module_first_seen_api": null
       }
     },
@@ -3190,8 +3213,19 @@
         "permission_flags": null,
         "related_permissions": [],
         "api_history": [],
-        "module_sources": [],
-        "module_api_status": "not-located-in-checked-modules",
+        "module_sources": [
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "core/java/android/provider/Downloads.java",
+              "core/tests/coretests/AndroidManifest.xml"
+            ],
+            "path_count": 2,
+            "source_class": "module-permission-source"
+          }
+        ],
+        "module_api_status": "current-source-located",
         "module_first_seen_api": null
       }
     },
@@ -24882,8 +24916,21 @@
         "permission_flags": null,
         "related_permissions": [],
         "api_history": [],
-        "module_sources": [],
-        "module_api_status": "not-located-in-checked-modules",
+        "module_sources": [
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "data/etc/privapp-permissions-platform.xml",
+              "packages/SystemUI/AndroidManifest.xml",
+              "packages/SystemUI/customization/src/com/android/systemui/shared/customization/data/content/CustomizationProviderContract.kt",
+              "packages/SystemUI/docs/device-entry/quickaffordance.md"
+            ],
+            "path_count": 4,
+            "source_class": "module-permission-source"
+          }
+        ],
+        "module_api_status": "current-source-located",
         "module_first_seen_api": null
       }
     },
@@ -24903,8 +24950,18 @@
         "permission_flags": null,
         "related_permissions": [],
         "api_history": [],
-        "module_sources": [],
-        "module_api_status": "not-located-in-checked-modules",
+        "module_sources": [
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "packages/Shell/AndroidManifest.xml"
+            ],
+            "path_count": 1,
+            "source_class": "module-permission-source"
+          }
+        ],
+        "module_api_status": "current-source-located",
         "module_first_seen_api": null
       }
     },
@@ -26244,8 +26301,19 @@
         "permission_flags": null,
         "related_permissions": [],
         "api_history": [],
-        "module_sources": [],
-        "module_api_status": "not-located-in-checked-modules",
+        "module_sources": [
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "core/java/android/provider/Downloads.java",
+              "core/tests/coretests/AndroidManifest.xml"
+            ],
+            "path_count": 2,
+            "source_class": "module-permission-source"
+          }
+        ],
+        "module_api_status": "current-source-located",
         "module_first_seen_api": null
       }
     },
@@ -26265,8 +26333,19 @@
         "permission_flags": null,
         "related_permissions": [],
         "api_history": [],
-        "module_sources": [],
-        "module_api_status": "not-located-in-checked-modules",
+        "module_sources": [
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "core/java/android/provider/Downloads.java",
+              "packages/Shell/AndroidManifest.xml"
+            ],
+            "path_count": 2,
+            "source_class": "module-permission-source"
+          }
+        ],
+        "module_api_status": "current-source-located",
         "module_first_seen_api": null
       }
     },
@@ -34815,6 +34894,20 @@
             ],
             "path_count": 1,
             "source_class": "module-permission-source"
+          },
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "core/api/system-current.txt",
+              "core/java/android/app/admin/DevicePolicyManager.java",
+              "core/java/android/net/NetworkStack.java",
+              "data/etc/platform.xml",
+              "services/tests/PackageManagerServiceTests/server/AndroidManifest.xml",
+              "services/tests/servicestests/AndroidManifest.xml"
+            ],
+            "path_count": 6,
+            "source_class": "module-api-surface"
           }
         ],
         "module_api_status": "current-source-located",
@@ -40823,6 +40916,16 @@
             ],
             "path_count": 12,
             "source_class": "module-api-surface"
+          },
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "data/etc/privapp-permissions-platform.xml",
+              "packages/Shell/AndroidManifest.xml"
+            ],
+            "path_count": 2,
+            "source_class": "module-permission-source"
           }
         ],
         "module_api_status": "current-source-located",
@@ -40860,6 +40963,15 @@
             ],
             "path_count": 7,
             "source_class": "module-api-surface"
+          },
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "packages/Shell/AndroidManifest.xml"
+            ],
+            "path_count": 1,
+            "source_class": "module-permission-source"
           }
         ],
         "module_api_status": "current-source-located",
@@ -43315,8 +43427,19 @@
         "permission_flags": null,
         "related_permissions": [],
         "api_history": [],
-        "module_sources": [],
-        "module_api_status": "not-located-in-checked-modules",
+        "module_sources": [
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "data/etc/platform.xml",
+              "packages/Shell/AndroidManifest.xml"
+            ],
+            "path_count": 2,
+            "source_class": "module-permission-source"
+          }
+        ],
+        "module_api_status": "current-source-located",
         "module_first_seen_api": null
       }
     },
@@ -60799,8 +60922,18 @@
         "permission_flags": null,
         "related_permissions": [],
         "api_history": [],
-        "module_sources": [],
-        "module_api_status": "not-located-in-checked-modules",
+        "module_sources": [
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "packages/Shell/AndroidManifest.xml"
+            ],
+            "path_count": 1,
+            "source_class": "module-permission-source"
+          }
+        ],
+        "module_api_status": "current-source-located",
         "module_first_seen_api": null
       }
     },
@@ -62414,8 +62547,19 @@
         "permission_flags": null,
         "related_permissions": [],
         "api_history": [],
-        "module_sources": [],
-        "module_api_status": "not-located-in-checked-modules",
+        "module_sources": [
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "apct-tests/perftests/core/src/android/util/XmlPerfTest.java",
+              "core/java/android/provider/Downloads.java"
+            ],
+            "path_count": 2,
+            "source_class": "module-reference-only"
+          }
+        ],
+        "module_api_status": "current-source-located",
         "module_first_seen_api": null
       }
     },
@@ -67343,8 +67487,20 @@
         "permission_flags": null,
         "related_permissions": [],
         "api_history": [],
-        "module_sources": [],
-        "module_api_status": "not-located-in-checked-modules",
+        "module_sources": [
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "core/tests/coretests/AndroidManifest.xml",
+              "packages/PrintSpooler/AndroidManifest.xml",
+              "packages/PrintSpooler/tests/outofprocess/AndroidManifest.xml"
+            ],
+            "path_count": 3,
+            "source_class": "module-permission-source"
+          }
+        ],
+        "module_api_status": "current-source-located",
         "module_first_seen_api": null
       }
     },
@@ -67627,8 +67783,18 @@
         "permission_flags": null,
         "related_permissions": [],
         "api_history": [],
-        "module_sources": [],
-        "module_api_status": "not-located-in-checked-modules",
+        "module_sources": [
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "packages/SystemUI/AndroidManifest.xml"
+            ],
+            "path_count": 1,
+            "source_class": "module-permission-source"
+          }
+        ],
+        "module_api_status": "current-source-located",
         "module_first_seen_api": null
       }
     },
@@ -68757,8 +68923,18 @@
         "permission_flags": null,
         "related_permissions": [],
         "api_history": [],
-        "module_sources": [],
-        "module_api_status": "not-located-in-checked-modules",
+        "module_sources": [
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "packages/Shell/AndroidManifest.xml"
+            ],
+            "path_count": 1,
+            "source_class": "module-permission-source"
+          }
+        ],
+        "module_api_status": "current-source-located",
         "module_first_seen_api": null
       }
     },
@@ -68778,8 +68954,18 @@
         "permission_flags": null,
         "related_permissions": [],
         "api_history": [],
-        "module_sources": [],
-        "module_api_status": "not-located-in-checked-modules",
+        "module_sources": [
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "packages/Shell/AndroidManifest.xml"
+            ],
+            "path_count": 1,
+            "source_class": "module-permission-source"
+          }
+        ],
+        "module_api_status": "current-source-located",
         "module_first_seen_api": null
       }
     },
@@ -68854,8 +69040,18 @@
         "permission_flags": null,
         "related_permissions": [],
         "api_history": [],
-        "module_sources": [],
-        "module_api_status": "not-located-in-checked-modules",
+        "module_sources": [
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "packages/Shell/AndroidManifest.xml"
+            ],
+            "path_count": 1,
+            "source_class": "module-permission-source"
+          }
+        ],
+        "module_api_status": "current-source-located",
         "module_first_seen_api": null
       }
     },
@@ -68875,8 +69071,18 @@
         "permission_flags": null,
         "related_permissions": [],
         "api_history": [],
-        "module_sources": [],
-        "module_api_status": "not-located-in-checked-modules",
+        "module_sources": [
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "packages/Shell/AndroidManifest.xml"
+            ],
+            "path_count": 1,
+            "source_class": "module-permission-source"
+          }
+        ],
+        "module_api_status": "current-source-located",
         "module_first_seen_api": null
       }
     },
@@ -72256,8 +72462,18 @@
         "permission_flags": null,
         "related_permissions": [],
         "api_history": [],
-        "module_sources": [],
-        "module_api_status": "not-located-in-checked-modules",
+        "module_sources": [
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "packages/Shell/AndroidManifest.xml"
+            ],
+            "path_count": 1,
+            "source_class": "module-permission-source"
+          }
+        ],
+        "module_api_status": "current-source-located",
         "module_first_seen_api": null
       }
     },
@@ -77599,6 +77815,15 @@
             ],
             "path_count": 5,
             "source_class": "module-permission-source"
+          },
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "packages/Shell/AndroidManifest.xml"
+            ],
+            "path_count": 1,
+            "source_class": "module-permission-source"
           }
         ],
         "module_api_status": "current-source-located",
@@ -77794,6 +78019,15 @@
             ],
             "path_count": 1,
             "source_class": "module-permission-source"
+          },
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "data/etc/platform.xml"
+            ],
+            "path_count": 1,
+            "source_class": "module-reference-only"
           }
         ],
         "module_api_status": "current-source-located",
@@ -77849,6 +78083,16 @@
               "PermissionController/res/xml/roles.xml"
             ],
             "path_count": 1,
+            "source_class": "module-permission-source"
+          },
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "data/etc/platform.xml",
+              "packages/Shell/AndroidManifest.xml"
+            ],
+            "path_count": 2,
             "source_class": "module-permission-source"
           }
         ],
@@ -78761,6 +79005,15 @@
             ],
             "path_count": 11,
             "source_class": "module-api-surface"
+          },
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "packages/Shell/AndroidManifest.xml"
+            ],
+            "path_count": 1,
+            "source_class": "module-permission-source"
           }
         ],
         "module_api_status": "current-source-located",
@@ -79009,6 +79262,15 @@
             ],
             "path_count": 12,
             "source_class": "module-api-surface"
+          },
+          {
+            "module": "frameworks-base",
+            "repository": "platform/frameworks/base",
+            "paths": [
+              "packages/Shell/AndroidManifest.xml"
+            ],
+            "path_count": 1,
+            "source_class": "module-permission-source"
           }
         ],
         "module_api_status": "current-source-located",
@@ -82541,6 +82803,24 @@
     "com.TechTreeGames.TheTower.permission.C2D_MESSAGE": {
       "kind": "defined-on-device",
       "defining_package": "com.TechTreeGames.TheTower",
+      "protection_level": "signature",
+      "aosp": {
+        "status": "not-android-framework-namespace",
+        "first_seen_api": null,
+        "available_since_api": null,
+        "source": null,
+        "source_line": null,
+        "source_tag": null,
+        "aosp_protection_level": null,
+        "aosp_permission_group": null,
+        "permission_flags": null,
+        "related_permissions": [],
+        "api_history": []
+      }
+    },
+    "com.Zxima.Catastrope.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
+      "kind": "defined-on-device",
+      "defining_package": "com.Zxima.Catastrope",
       "protection_level": "signature",
       "aosp": {
         "status": "not-android-framework-namespace",
@@ -87797,7 +88077,7 @@
     "com.android.vending.BIOAUTH_CONSENT": {
       "kind": "defined-on-device",
       "defining_package": "com.android.vending",
-      "protection_level": "signature",
+      "protection_level": "signature|privileged",
       "aosp": {
         "status": "not-android-framework-namespace",
         "first_seen_api": null,

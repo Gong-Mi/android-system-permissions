@@ -1,9 +1,9 @@
 {
   "schema": "android-system-permissions/permission-directory-with-aosp-v1",
-  "generated_at": "2026-09-09T17:14:44.511617+00:00",
+  "generated_at": "2026-09-12T09:40:21.907122+00:00",
   "source": "local device via su: dumpsys package + batched pm dump",
-  "permission_count": 4590,
-  "declared_permission_rows": 24427,
+  "permission_count": 4591,
+  "declared_permission_rows": 24438,
   "permissions": {
     ".PERMISSION": {
       "kind": "declared-without-definition",
@@ -79111,6 +79111,24 @@
         "api_history": []
       }
     },
+    "com.Zxima.Catastrope.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
+      "kind": "defined-on-device",
+      "defining_package": "com.Zxima.Catastrope",
+      "protection_level": "signature",
+      "aosp": {
+        "status": "not-android-framework-namespace",
+        "first_seen_api": null,
+        "available_since_api": null,
+        "source": null,
+        "source_line": null,
+        "source_tag": null,
+        "aosp_protection_level": null,
+        "aosp_permission_group": null,
+        "permission_flags": null,
+        "related_permissions": [],
+        "api_history": []
+      }
+    },
     "com.absinthe.anywhere_.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
       "kind": "defined-on-device",
       "defining_package": "com.absinthe.anywhere_",
@@ -84352,7 +84370,7 @@
     "com.android.vending.BIOAUTH_CONSENT": {
       "kind": "defined-on-device",
       "defining_package": "com.android.vending",
-      "protection_level": "signature",
+      "protection_level": "signature|privileged",
       "aosp": {
         "status": "not-android-framework-namespace",
         "first_seen_api": null,

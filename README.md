@@ -30,7 +30,7 @@ then runs `aapt2 dump permissions` in eight parallel workers. It does not invoke
 one root shell once per application and does not confuse `dumpsys package`
 bookkeeping fields with manifest permissions.
 
-The checked-in snapshot stores only the permission directory: 4,617 unique
+The checked-in snapshot stores only the permission directory: 4,591 unique
 permission names. Each entry contains only:
 
 - `kind` (`framework`, `defined-on-device`, or
@@ -38,8 +38,8 @@ permission names. Each entry contains only:
 - `defining_package`, when present in the device definition table;
 - `protection_level`, when present.
 
-The scan that produced it covered 902 package records and 1,737 installed APK
-paths (base plus splits), including 732 packages with declarations and 24,302
+The scan that produced it covered 851 package records and 1,722 installed APK
+paths (base plus splits), including 772 packages with declarations and 24,438
 manifest declaration rows. Package names and APP-to-permission mappings are not
 stored in the committed catalog.
 The AOSP-enriched directory is generated separately at

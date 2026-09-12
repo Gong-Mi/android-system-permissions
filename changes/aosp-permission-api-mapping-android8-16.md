@@ -23,11 +23,11 @@ api/local-android16-permission-directory-aosp.json
 
 | Result | Count |
 |---|---:|
-| Permission directory entries | 4,559 |
-| `android.permission.*` entries | 1,317 |
+| Permission directory entries | 4,591 |
+| `android.permission.*` entries | 1,319 |
 | Found in `frameworks/base/core/res/AndroidManifest.xml` | 1,009 |
-| Not found in that file | 308 |
-| Non-framework/vendor/app-specific entries | 3,242 |
+| Not found in that file | 310 |
+| Non-framework/vendor/app-specific entries | 3,272 |
 
 For the 1,009 matches, each entry records:
 
@@ -109,7 +109,7 @@ the permission was introduced in API 4. For API 5 and later entries, the tag
 window covers the corresponding major release but still does not provide an
 exact development commit.
 
-## The 308 unresolved framework names
+## The 310 unresolved framework names
 
 `not-found-in-frameworks-base-core-res` means only that the permission was not
 found in this one AOSP file. It does not mean “not an AOSP permission”. Likely

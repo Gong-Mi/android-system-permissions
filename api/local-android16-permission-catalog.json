@@ -1,9 +1,9 @@
 {
   "schema": "android-system-permissions/permission-directory-v1",
-  "generated_at": "2026-09-09T17:14:44.511617+00:00",
+  "generated_at": "2026-09-12T09:40:21.907122+00:00",
   "source": "local device via su: dumpsys package + batched pm dump",
-  "permission_count": 4590,
-  "declared_permission_rows": 24427,
+  "permission_count": 4591,
+  "declared_permission_rows": 24438,
   "permissions": {
     ".PERMISSION": {
       "kind": "declared-without-definition",
@@ -7275,6 +7275,11 @@
       "defining_package": "com.TechTreeGames.TheTower",
       "protection_level": "signature"
     },
+    "com.Zxima.Catastrope.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
+      "kind": "defined-on-device",
+      "defining_package": "com.Zxima.Catastrope",
+      "protection_level": "signature"
+    },
     "com.absinthe.anywhere_.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION": {
       "kind": "defined-on-device",
       "defining_package": "com.absinthe.anywhere_",
@@ -8733,7 +8738,7 @@
     "com.android.vending.BIOAUTH_CONSENT": {
       "kind": "defined-on-device",
       "defining_package": "com.android.vending",
-      "protection_level": "signature"
+      "protection_level": "signature|privileged"
     },
     "com.android.vending.CHECK_LICENSE": {
       "kind": "defined-on-device",
