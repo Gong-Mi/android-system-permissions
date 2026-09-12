@@ -70,7 +70,7 @@ boundaries explicitly.
 ```text
 api/                 API-level indexes and permission API records
 aosp/                Source anchors: repository, tag, path, symbol, lines
-changes/             Human-readable API-level change notes
+changes/             Human-readable API-level change notes, including AVF permission and invocation evidence
 devices/             Device dumps and reproducible observation records
 schemas/             Machine-readable entry schemas
 scripts/             Import, normalization, and validation tools
